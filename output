@@ -1,0 +1,23 @@
+  UserID MovieID         MovieTitle                Genre UserPreferredGenres  \
+0   U001    M101          Inception      Sci-Fi|Thriller       Sci-Fi|Action   
+1   U002    M102            Titanic        Romance|Drama       Romance|Drama   
+2   U003    M103  Avengers: Endgame        Action|Sci-Fi      Action|Fantasy   
+3   U004    M104       The Notebook        Romance|Drama      Thriller|Drama   
+4   U005    M105       Interstellar         Sci-Fi|Drama        Sci-Fi|Drama   
+5   U006    M106      The Godfather          Crime|Drama        Action|Crime   
+6   U007    M107           Parasite       Thriller|Drama      Drama|Thriller   
+7   U008    M108      The Lion King  Animation|Adventure   Animation|Fantasy   
+8   U009    M109              Joker          Drama|Crime      Thriller|Crime   
+9   U010    M110         La La Land      Romance|Musical      Romance|Comedy   
+
+   UserRating  PredictedRating  AI_MatchScore Recommended  
+0           5              4.8           0.95         Yes  
+1           4              4.5           0.89         Yes  
+2           5              4.9           0.97         Yes  
+3           2              2.3           0.45          No  
+4           5              4.7           0.92         Yes  
+5           4              3.8           0.83         Yes  
+6           5              4.6           0.91         Yes  
+7           3              3.7           0.76         Yes  
+8           4              4.4           0.88         Yes  
+9           3              3.2           0.61          No  
