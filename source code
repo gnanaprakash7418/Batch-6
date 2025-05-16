@@ -1,0 +1,35 @@
+
+import pandas as pd
+
+# Create the dataset
+data = {
+    "UserID": ["U001", "U002", "U003", "U004", "U005", "U006", "U007", "U008", "U009", "U010"],
+    "MovieID": ["M101", "M102", "M103", "M104", "M105", "M106", "M107", "M108", "M109", "M110"],
+    "MovieTitle": [
+        "Inception", "Titanic", "Avengers: Endgame", "The Notebook", "Interstellar",
+        "The Godfather", "Parasite", "The Lion King", "Joker", "La La Land"
+    ],
+    "Genre": [
+        "Sci-Fi|Thriller", "Romance|Drama", "Action|Sci-Fi", "Romance|Drama", "Sci-Fi|Drama",
+        "Crime|Drama", "Thriller|Drama", "Animation|Adventure", "Drama|Crime", "Romance|Musical"
+    ],
+    "UserPreferredGenres": [
+        "Sci-Fi|Action", "Romance|Drama", "Action|Fantasy", "Thriller|Drama", "Sci-Fi|Drama",
+        "Action|Crime", "Drama|Thriller", "Animation|Fantasy", "Thriller|Crime", "Romance|Comedy"
+    ],
+    "UserRating": [5, 4, 5, 2, 5, 4, 5, 3, 4, 3],
+    "PredictedRating": [4.8, 4.5, 4.9, 2.3, 4.7, 3.8, 4.6, 3.7, 4.4, 3.2],
+    "AI_MatchScore": [0.95, 0.89, 0.97, 0.45, 0.92, 0.83, 0.91, 0.76, 0.88, 0.61]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Recommendation logic:
+# Recommend if PredictedRating >= 3.5 and AI_MatchScore >= 0.75
+df['Recommended'] = df.apply(
+    lambda row: "Yes" if row['PredictedRating'] >= 3.5 and row['AI_MatchScore'] >= 0.75 else "No",
+    axis=1
+)
+
+print(df)
